@@ -1,0 +1,332 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navigationBar {
+  width: 100%;
+  height: 140px;
+  box-sizing: border-box;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+}
+.navLeft {
+  width: 45%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding-left: 160px;
+}
+
+.imgContainer {
+  width: 150px;
+  height: 60px;
+  cursor: pointer;
+  background-image: url("https://salinaka-ecommerce.web.app/images/logo-full.059e10fa5fedbfb65165e7565ed3936f.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.navLink a {
+  height: 30px;
+  text-decoration: none;
+  font-weight: 480;
+  font-size: 14px;
+  padding: 0 20px;
+  color: #101010;
+  opacity: 0.5;
+  display: inline-block;
+  text-align: center;
+  line-height: 30px;
+}
+
+.navLink a:hover {
+  background-color: #f2f2f2;
+}
+
+.navLink .active {
+  opacity: 0.8;
+  font-weight: bold;
+}
+.navRight {
+  width: 40%;
+  text-align: right;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.navRight .searchContainer {
+  width: 70%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.navRight input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #e1e1e1;
+  padding: 0px 40px;
+  background-color: #ffffff;
+  color: #bebebe;
+  outline: none;
+  font-size: 10px;
+}
+
+.navRight .search {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 13px;
+  left: 15px;
+}
+.navRight .shoppingBag {
+  position: relative;
+  cursor: pointer;
+}
+.navRight .shoppingBagImg {
+  display: inline-block;
+  width: 52px;
+  height: 35px;
+  padding: 0 11px;
+  margin-left: 5px;
+}
+
+.productQuantity {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+  font-weight: 600;
+  position: absolute;
+  top: -5px;
+  right: 0;
+  text-align: center;
+  line-height: 18px;
+  font-size: 14px;
+}
+.noShow {
+  display: none;
+}
+.model {
+  width: calc(100% - 500px);
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: none;
+}
+
+.shoppingCart {
+  width: 500px;
+  height: 100vh;
+  background-color: white;
+  position: fixed;
+  right: -500px;
+  bottom: 0;
+  transition: all 0.3s ease-in-out;
+  box-sizing: border-box;
+  border-left: 2px solid rgb(225, 225, 225);
+  padding-left: 10px;
+  z-index: 99;
+}
+.showShoppingCart {
+  right: 0px;
+}
+.cartTop {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  align-items: center;
+}
+.myBasket {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+.totalNumber {
+  font-size: 12px;
+  color: rgb(74, 74, 74);
+}
+
+.cartTopRight {
+  display: flex;
+}
+.cartTopRight div {
+  height: 40px;
+  border: 1px solid rgb(225, 225, 225);
+  text-align: center;
+  line-height: 40px;
+  padding: 0 15px;
+  color: rgb(74, 74, 74);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+#clearBasket {
+  display: block;
+  background-color: white;
+  height: 40px;
+  width: 100px;
+  margin-left: -5px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 40px;
+  border: 1px solid rgb(225, 225, 225);
+  padding-top: 1px;
+}
+.cartMiddle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgb(225, 225, 225);
+  margin-bottom: 15px;
+}
+.emptyBasket {
+  width: 100%;
+  height: 70vh;
+  text-align: center;
+  line-height: 70vh;
+  color: #909090;
+  font-weight: 600;
+}
+#add,
+#minus {
+  width: 35px;
+  height: 50px;
+  border: 1px solid rgb(225, 225, 225);
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 45px;
+  cursor: pointer;
+  display: block;
+  background-color: white;
+  margin-left: -11px;
+}
+#add:hover,
+#minus:hover,
+#clearBasket:hover,
+.cartTopRight div:hover {
+  background-color: #d4d2d2;
+}
+.cartImgContainer {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+}
+.cartImgContainer img {
+  width: 90px;
+  height: 90px;
+}
+
+.cartProductDetail {
+  width: 200px;
+  height: 90px;
+}
+.cartProductName {
+  color: rgb(26, 26, 26);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: left;
+  margin-top: 10px;
+  text-decoration: underline;
+}
+
+.price {
+  width: 50px;
+  height: 90px;
+  text-align: center;
+  line-height: 90px;
+  font-weight: 700;
+}
+.small {
+  font-size: 12px;
+  color: #8d8d8d;
+}
+.cartProductStyle {
+  display: flex;
+}
+
+.cartProductStyle div {
+  width: 90px;
+  text-align: left;
+  margin-top: 10px;
+  line-height: 25px;
+}
+
+.cartProductStyle .color {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: black;
+  margin-top: 5px;
+}
+
+.cartClose {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 30px;
+  border: 1px solid rgb(225, 225, 225);
+  cursor: pointer;
+}
+
+.cartBottom {
+  width: 490px;
+  height: 100px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgb(225, 225, 225);
+}
+.checkOut {
+  text-align: left;
+  padding: 10px;
+  line-height: 40px;
+}
+#amount {
+  font-size: 12px;
+  color: #8d8d8d;
+}
+#totalPrice {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.checkOutButton {
+  width: 150px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  line-height: 50px;
+}
+.navRight button {
+  width: 13%;
+  height: 40px;
+  vertical-align: middle;
+  margin-left: 10px;
+  border: 1px solid #e1e1e1;
+  color: #88838c;
+  background-color: #f2f2f2;
+}
+
+.navRight .active {
+  background-color: #101010;
+  color: white;
+}

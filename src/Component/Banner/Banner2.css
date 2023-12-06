@@ -1,0 +1,37 @@
+.banner2Container {
+  width: 90%;
+  height: 400px;
+  background-color: #f3f3f3;
+  margin: auto;
+  display: flex;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+.banner2Left {
+  width: 60%;
+  padding: 40px;
+  margin: auto;
+}
+.banner2Left h2 {
+  font-weight: lighter;
+  font-size: 48px;
+  margin-bottom: 30px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.guyImg {
+  width: 60%;
+  height: 100%;
+  background-image: url("https://salinaka-ecommerce.web.app/images/banner-guy.fbf4f0f7396fe31ca288dc1dd9822342.png");
+  background-position: center;
+}
+
+.girlImg {
+  width: 60%;
+  height: 100%;
+  background-image: url("https://salinaka-ecommerce.web.app/images/banner-girl-1.24e9b8f48d5a0ac32680edd194503695.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}

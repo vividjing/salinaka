@@ -1,0 +1,20 @@
+.footerComponent {
+  width: 100%;
+  height: 200px;
+  background-color: #f0f0f0;
+}
+.footerContainer {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  align-items: center;
+  font-family: Tajawal, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #1e1e1e;
+}
+.footerMiddle {
+  text-align: center;
+}

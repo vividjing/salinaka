@@ -1,0 +1,51 @@
+.bannerContainer {
+  width: 90%;
+  height: 400px;
+  background-color: #f3f3f3;
+  margin: auto;
+  display: flex;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+.bannerLeft {
+  width: 60%;
+  padding: 40px;
+  margin: auto;
+}
+.bannerLeft h2 {
+  font-weight: lighter;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+.bannerLeft h2 span {
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.bannerLeft p {
+  font-size: 15px;
+  color: #4a4a4a;
+  font-weight: 600;
+  line-height: 23px;
+  padding-right: 40px;
+  margin-bottom: 40px;
+}
+
+.bannerLeft .shoppingButton {
+  width: 120px;
+  height: 50px;
+  background-color: #101010;
+  color: white;
+  outline: none;
+  text-align: center;
+  line-height: 50px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.glassImg {
+  width: 40%;
+  height: 100%;
+  background-image: url("https://salinaka-ecommerce.web.app/images/banner-girl.789f1fa6f451ad26c5039fcbc049ace7.png");
+  background-size: cover;
+}
