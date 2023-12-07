@@ -3,7 +3,7 @@ import { useState } from "react";
 import "../Shop/Shop.css";
 import "./SearchResult.css";
 import { Link } from "react-router-dom";
-import { addToCart } from "../../action/action";
+import { addToCart, searchBoxUnshow } from "../../action/action";
 import { useDispatch } from "react-redux";
 import check from "../../assets/images/check.svg";
 import { UseSelector, useSelector } from "react-redux/es/hooks/useSelector";
@@ -19,7 +19,13 @@ export default function Search() {
   const dispatch = useDispatch();
   const handleAddToCart = (e, filtedItemId) => {
     e.stopPropagation();
+    console.log("button");
     dispatch(addToCart(filtedItemId));
+  };
+
+  const detailInfoHandler = () => {
+    dispatch(searchBoxUnshow(false));
+    document.body.style.overflow = "auto";
   };
   return (
     <div
@@ -59,7 +65,10 @@ export default function Search() {
                       </div>
                       <div className="shopListDetailContent">
                         <Link to={`/product/${item.id}`}>
-                          <div className="shopListDetailTop">
+                          <div
+                            onClick={detailInfoHandler}
+                            className="shopListDetailTop"
+                          >
                             <div className="shopImg">
                               <img src={item.src} alt="" />
                             </div>
